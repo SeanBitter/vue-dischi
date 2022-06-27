@@ -1,20 +1,30 @@
 <template>
   <div id="app">
-    <AlbumList/>
+    <SearchBar :genres-list="genresList"></SearchBar>
+    <AlbumsList/>
   </div>
 </template>
 
 <script>
-import AlbumList from './components/AlbumList.vue'
+import AlbumsList from './components/AlbumsList.vue'
+import SearchBar from './components/SearchBar.vue'
+// import { state } from "./store";
 
 export default {
   name: 'App',
   components: {
-    AlbumList,
+    AlbumsList, SearchBar
+  },
+  data() {
+    return {
+      genresList: [],
+      genre: "",
+    }
   }
 }
 </script>
 
 <style lang="scss">
 @import "assets/scss/main.scss";
+
 </style>

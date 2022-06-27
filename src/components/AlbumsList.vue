@@ -1,6 +1,6 @@
 <template>
-    <div class="container py-5">
-        <div class="row row-cols-5">
+    <div class="container overflow-auto py-5">
+        <div class="row row-cols-5 g-3">
             <div class="col" v-for="album in albums" :key="album.title">
                 <TheAlbum :info="album"></TheAlbum>
             </div>
@@ -13,7 +13,7 @@
     import axios from 'axios';
 
     export default {
-        name: 'AlbumList',
+        name: 'AlbumsList',
         components: { TheAlbum },
 
         data() {

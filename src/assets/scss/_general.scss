@@ -1,9 +1,13 @@
+@import "./variables.scss";
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
-    background-color: #1E2D3B;
+    background-color: $primary;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: white;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
